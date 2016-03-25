@@ -1,0 +1,114 @@
+//deklarisemo sve boje koje koristimo
+@mojaboja1: #ffffff;
+@mojaboja2: #405580;
+@mojaboja3: #555555;
+@mojaboja4: #f0f0f0;
+//deklarisemo sve sirine koje koristimo
+@sirina1: 1140px;
+@sirina2: 960px;
+@sirina3: 200px;
+@sirina4: 40px;
+@sirina5: 100%;
+@sirina6: 29%;
+//deklarisemo sve visine koje korisitmo
+@visina1: 40px;
+@visina2: 60px;
+@visina3: 86px;
+
+* {
+  border : 0;
+  margin : 0;
+  padding : 0;
+}
+body {
+  background : @mojaboja4;
+  color : @mojaboja3;
+  font: 14px/20px Arial, San-Serif;
+  margin : 0;
+}
+h1 {
+  font-size: 180%;
+  line-height:120%;
+  padding : 5% 0;
+  text-align :center;
+}
+p {
+  padding : 18;
+}
+img {
+  height : auto;
+  max-width: @sirina5;
+  text-align: center;
+  width: auto;
+}
+a {
+  color: @mojaboja1;
+  font-weight: bold;
+  text-decoration: none;
+  //nasledjivanje
+  &:hover {
+    color: @mojaboja1;
+    text-decoration: underline;
+  }
+  &:hover#menu-icon {
+    border-radius: 4px 4px 0 0;
+  }
+}
+header {
+  background: @mojaboja2;
+  height:@visina3;
+  left : 0;
+  opacity: 0.90;
+  position:fixed;
+  top: 0;
+  width:@sirina5;
+  z-index : 100;
+}
+#logo {
+  background: url(http://www.w3newbie.com/wp-content/uploads/the-gym.png) no-repeat center;
+  float: left;
+  height:@visina2;
+  margin: 20px;
+  width: @sirina3;
+}
+nav {
+  float:right;
+  padding: 35px 20px 20px 0;
+  ul {
+    li {
+      display: inline-block;
+      float: left;
+      padding: 20px;
+    }
+  }
+}
+#menu-icon {
+  background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+  display:hidden;
+  height:@visina1;
+  width:@sirina4;
+}
+ul {
+  list-style: none;
+}
+.current {
+  color: @mojaboja1;
+  text-decoration: underline;
+}
+#doc {
+  margin: 20px 0;
+}
+#content {
+  margin: 165px auto;
+  max-width: @sirina1;
+}
+.blueberry {
+  margin-top: 110px;
+  max-width: @sirina2;
+}
+section {
+  float: left;
+  margin : 2% 2%;
+  text-align: center;
+  width : @sirina6;
+}
